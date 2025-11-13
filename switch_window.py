@@ -15,7 +15,7 @@ driver.get("https://formy-project.herokuapp.com/switch-window")
 original_handle=driver.current_window_handle
 # Interact with elements - open new window
 
-driver.find_element(By.ID, "new-tab-button").click()
+driver.find_element(By.ID, "new-tab-button").click
 # print("new window")
 
 # get all window handles

@@ -1,5 +1,7 @@
 import pytest
 from selenium import webdriver
+# from LoginPage import LoginPage
+
 # Runs once per test class
 @pytest.fixture(scope="class")
 
@@ -17,3 +19,5 @@ def setup_driver(request):
 
     # teardown 
     driver.quit()
+
+

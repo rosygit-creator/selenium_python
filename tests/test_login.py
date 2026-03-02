@@ -1,6 +1,6 @@
 import pytest 
-# from selenium import webdriver
 from pages.LoginPage import *
+from utils.utils import *
 
 # # Runs once per test class
 # @pytest.fixture(scope="class")
@@ -27,13 +27,15 @@ from pages.LoginPage import *
 
 # commented since the setup_driver fixture is in conftest.py
 @pytest.mark.usefixtures("setup_driver")
-# @pytest.mark.usefixtures("login_page")
+
 class TestLogin:
+    url1="https://www.saucedemo.com/"
+    url2="https://www.google.com/maps"
+    
     def test_valid_login(self):
-        
+        get_url(self.driver, self.url1)
+
         login_page = LoginPage(self.driver)
-        login_page.get_url("https://www.saucedemo.com/")
-        
         login_page.input_username("standard_user")
         login_page.input_password("secret_sauce")
         login_page.click_login()
@@ -42,8 +44,8 @@ class TestLogin:
         assert "Swag Labs" in self.driver.title 
 
     def test_google_browse(self):
-        login_page = LoginPage(self.driver)
-        login_page.get_url("https://www.google.com/maps")
+        get_url(self.driver, self.url2)
+        assert "Google" in self.driver.title
 
 
 

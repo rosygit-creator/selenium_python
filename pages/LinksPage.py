@@ -8,8 +8,8 @@ class LinksPage:
 
     all_links="//div[@class='jumbotron-fluid']/li/a"
 
-    def get_url(self, url):
-        self.driver.get(url)
+    # def get_url(self, url):
+    #     self.driver.get(url)
 
 
     def get_links(self):

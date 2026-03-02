@@ -20,4 +20,11 @@ def setup_driver(request):
     # teardown 
     driver.quit()
 
+# @pytest.fixture(scope="class")
+
+# def get_url(driver, url):
+#     return driver.get(url)
+
+
+
 

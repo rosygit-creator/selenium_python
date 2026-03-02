@@ -12,9 +12,6 @@ sys.dont_write_bytecode = True
 def setup_driver(request):
     driver = webdriver.Chrome()
     driver.maximize_window()
-
-    # driver.get("https://www.saucedemo.com/")
-
     request.cls.driver = driver
     #The yield statement pauses the fixture and provides the browser instance 
     # to the test function. Once the test function finishes, execution returns to the 

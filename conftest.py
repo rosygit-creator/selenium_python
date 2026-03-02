@@ -1,6 +1,10 @@
 import pytest
 from selenium import webdriver
-# from LoginPage import LoginPage
+import sys
+
+# Prevent creation of .pyc files during tests
+
+sys.dont_write_bytecode = True
 
 # Runs once per test class
 @pytest.fixture(scope="class")
